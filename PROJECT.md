@@ -21,14 +21,13 @@ The project will be built with:
 
 - **Hero Section**: Engaging visuals with motion animations, highlighting trading and educational opportunities.
 - **Value Proposition**: Why choose this platform? (trust, luxury, expertise, opportunities in trading & crypto).
-- **Call-to-Action Buttons**: Clear prompts for sign-up, free lessons, or course previews.
+- **Call-to-Action Buttons**: Clear prompts for sign-up, pricing.
 - **Testimonials/Stats Section**: Builds trust and authority in the financial domain.
 - **Footer**: Contact, social media, quick links.
 
 ### Education Page
 
-- **Course Categories**: Stocks, Options, and Crypto trading.
-- **Interactive Components**: Lessons, tutorials, and explainer modules.
+- **Course Categories**: Tecnical Analysis, Financial Indicators.
 - **Localized Content**: Entirely in Turkish, focusing on the local audience.
 
 ---
