@@ -1,5 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import CustomThemeProvider from "../components/theme/ThemeProvider";
+import NavbarWrapper from "../components/common/Navbar/NavbarWrapper";
+import { Box } from "@mui/material";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -21,7 +23,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="tr">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <CustomThemeProvider>{children}</CustomThemeProvider>
+        <CustomThemeProvider>
+          <NavbarWrapper />
+          <Box component="main">{children}</Box>
+        </CustomThemeProvider>
       </body>
     </html>
   );
