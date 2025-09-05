@@ -128,7 +128,7 @@ export const Spotlight = ({
           sx={{
             position: "absolute",
             transformOrigin: "center top",
-            height: "40vh",
+            height: "70vh",
             left: "1.05vw",
             top: 0,
             width: "98.5vw",
@@ -151,7 +151,7 @@ export const Spotlight = ({
               transparent 50%
             )`,
             maskImage: `radial-gradient(
-              circle at 50% -20%,
+              circle at 50% -40%,
               black 0%,
               transparent 50%
             )`,

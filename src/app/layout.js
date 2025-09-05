@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <CustomThemeProvider>
           <NavbarWrapper />
-          <Box component="main">{children}</Box>
+          {children}
         </CustomThemeProvider>
       </body>
     </html>
