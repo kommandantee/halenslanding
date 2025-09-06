@@ -347,20 +347,84 @@ const Navbar = ({ onThemeToggle, isDarkMode }) => {
               mx: 4,
             }}
           >
-            <AnimatePresence>
-              {navItems.map((item, index) => (
-                <NavItem
-                  key={item.label}
-                  delay={index * 0.1}
-                  color="inherit"
-                  href={item.href}
-                  isDark={isDarkMode}
-                  theme={theme}
-                >
-                  {item.label}
-                </NavItem>
-              ))}
-            </AnimatePresence>
+            {/* Glassy Navigation Container */}
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                padding: "8px 16px",
+                background: isDarkMode
+                  ? alpha(theme.palette.common.black, 0.25)
+                  : alpha(theme.palette.common.white, 0.25),
+                backdropFilter: "blur(20px) saturate(1)",
+                WebkitBackdropFilter: "blur(20px) saturate(1)",
+                borderRadius: "24px",
+                border: `1px solid ${alpha(
+                  isDarkMode
+                    ? theme.palette.common.white
+                    : theme.palette.common.black,
+                  0.1
+                )}`,
+                boxShadow: isDarkMode
+                  ? `0 8px 32px ${alpha(
+                      theme.palette.common.black,
+                      0.3
+                    )}, inset 0 1px 0 ${alpha(theme.palette.common.white, 0.1)}`
+                  : `0 8px 32px ${alpha(
+                      theme.palette.common.black,
+                      0.1
+                    )}, inset 0 1px 0 ${alpha(
+                      theme.palette.common.white,
+                      0.2
+                    )}`,
+                transition: "all 0.3s ease-in-out",
+                "&:hover": {
+                  background: isDarkMode
+                    ? `linear-gradient(135deg, ${alpha(
+                        theme.palette.background.paper,
+                        0.15
+                      )} 0%, ${alpha(
+                        theme.palette.background.paper,
+                        0.08
+                      )} 100%)`
+                    : `linear-gradient(135deg, ${alpha(
+                        theme.palette.common.white,
+                        0.2
+                      )} 0%, ${alpha(theme.palette.common.white, 0.12)} 100%)`,
+                  boxShadow: isDarkMode
+                    ? `0 12px 40px ${alpha(
+                        theme.palette.common.black,
+                        0.4
+                      )}, inset 0 1px 0 ${alpha(
+                        theme.palette.common.white,
+                        0.15
+                      )}`
+                    : `0 12px 40px ${alpha(
+                        theme.palette.common.black,
+                        0.15
+                      )}, inset 0 1px 0 ${alpha(
+                        theme.palette.common.white,
+                        0.25
+                      )}`,
+                  transform: "translateY(-1px)",
+                },
+              }}
+            >
+              <AnimatePresence>
+                {navItems.map((item, index) => (
+                  <NavItem
+                    key={item.label}
+                    delay={index * 0.1}
+                    color="inherit"
+                    href={item.href}
+                    isDark={isDarkMode}
+                    theme={theme}
+                  >
+                    {item.label}
+                  </NavItem>
+                ))}
+              </AnimatePresence>
+            </Box>
           </Box>
 
           {/* Right Side Actions */}
